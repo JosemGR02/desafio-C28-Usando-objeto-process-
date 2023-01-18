@@ -1,8 +1,8 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| Utils Info |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-
-const argumentosEntrada = process.argv.slice(2)
+// .slice(2)
+const argumentosEntrada = process.argv
 const pathEjecucion = process.execPath
 const nombrePlataforma = process.platform
 const processId = process.pid

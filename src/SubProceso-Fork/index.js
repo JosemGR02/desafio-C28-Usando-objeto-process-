@@ -1,13 +1,14 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| Subproceso |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-import { RANDOMS_UTILS } from '../Utilidades/utils-randoms.js';
+import { RANDOMS_UTILS } from '../../Utilidades/utils-randoms.js';
 // import { generadorNumRandoms } from '../Utilidades/utils-randoms.js';
 
 
-let resultadoUtils = RANDOMS_UTILS();
+const resultadoUtils = RANDOMS_UTILS();
 // let resultadoUtils = generadorNumRandoms();
 
+// export const resultadoSubproceso = { resultadoUtils };
 
 process.send(`Resultado de la operacion de Utils: ${resultadoUtils}`);
 

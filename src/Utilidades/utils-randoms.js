@@ -75,11 +75,11 @@ const generadorNumRandoms = (cantidadNumPedidos) => {
 
 // export const RANDOMS_UTILS = { generadorNumRandoms };
 
-process.on('message', (datosUtils) => {
-    process.send(generadorNumRandoms(datosUtils))
-})
+// process.on('message', (datosUtils) => {
+//     process.send(generadorNumRandoms(datosUtils))
+// })
 
-// process.send({ 'message': objetoUtils });
+process.send({ 'message': objetoUtils });
 
 process.exit();
 

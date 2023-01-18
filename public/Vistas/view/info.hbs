@@ -2,18 +2,20 @@
 <div>
     <div>
         <h2> PAGINA INFORMACION</h2>
-        <ul>
-            <li>Argumento de entrada: {{informacion.argumentosEntrada}}</li>
-            <li>Path de ejecución: {{informacion.pathEjecucion}}</li>
-            <li>Nombre de la plataforma: {{informacion.nobrePlataforma}}</li>
-            <li>Process Id: {{informacion.processID}}</li>
-            <li>Version de Node: {{informacion.versionNode}}</li>
-            <li>Carpeta del proyecto: {{informacion.carpetaDeProyecto}}</li>
-            <li>Memoria reservada: {{informacion.memoriaTotalReservada}}</li>
+        <ul>        
+            <li>Argumento de entrada: {{datos.argumentosEntrada}}</li>
+            <li>Path de ejecución: {{datos.pathEjecucion}}</li>
+            <li>Nombre de la plataforma: {{datos.nombrePlataforma}}</li>
+            <li>Process Id: {{datos.processId}}</li>
+            <li>Version de Node: {{datos.versionNode}}</li>
+            <li>Carpeta del proyecto: {{datos.carpetaDeProyecto}}</li>
+            <li>Memoria reservada: {{datos.memoriaTotalReservada}}</li>
         </ul>
     </div>
     <div>
-        <button class="btn btn-success" onclick="location.href='/api/autenticacion/login'">Ir pagina de inicio sesion</button>
+        <button class="btn btn-primary" onclick="location.href='/api/randoms/'">Ir pagina de Nros randoms</button>
+
+        <button class="btn btn-secondary" onclick="location.href='/api/autenticacion/login'">Ir pagina de inicio sesion</button>
     </div>
 </div>
 
