@@ -27,14 +27,3 @@ export { ruta as RutaInfo };
 
 
 
-
-        // const informacion = {
-        //     argumentosEntrada: process.argv.slice(2),
-        //     pathEjecucion: process.execPath,
-        //     nobrePlataforma: process.platform,
-        //     processId: process.pid,
-        //     versionNode: process.version,
-        //     carpetaDeProyecto: process.cwd(),
-        //     memoriaTotalReservada: process.memoryUsage()
-        // }
-        // respuesta.render('view/info', { success: true, respuesta: informacion });

@@ -6,10 +6,10 @@
 const totalNrosGenerados = [].sort((a, b) => a - b);
 
 // objeto final (le paso a el subproceso)
-const objetoUtils = {}
+const objetoUtils = {};
 
 // objeto clave valor
-const objetoClaveValor = {}
+const objetoClaveValor = {};
 
 // arrays para contar repeticion de numeros
 const arrayNrosSinRepetir = [];
@@ -20,7 +20,11 @@ let contador = 1;
 
 const generadorNumRandoms = (cantidadNumPedidos) => {
 
+    // let cantidad = Number(cantidadNumPedidos);
+
     if (cantidadNumPedidos) {
+        console.log(cantidadNumPedidos)
+
         for (let a = 0; a < cantidadNumPedidos; a++) {
             const numerosRandoms = Math.round(Math.random() * (1 - 1000) + 1)
 
@@ -29,6 +33,8 @@ const generadorNumRandoms = (cantidadNumPedidos) => {
             } else {
                 totalNrosGenerados[numerosRandoms] = 1;
             }
+            console.log(totalNrosGenerados)
+
             return totalNrosGenerados;
         }
     } else {
@@ -62,6 +68,7 @@ const generadorNumRandoms = (cantidadNumPedidos) => {
         if (!c == arrayNrosSinRepetir.length) {
             console.log("Error, todavia no se pasaron todos los datos a objetoClaveValor");
         } else {
+            console.log(objetoClaveValor);
             return objetoClaveValor;
         }
     }
@@ -72,15 +79,60 @@ const generadorNumRandoms = (cantidadNumPedidos) => {
     console.log(objetoUtils);
     return objetoUtils;
 }
+export const RANDOMS_UTILS = { generadorNumRandoms };
 
-// export const RANDOMS_UTILS = { generadorNumRandoms };
 
-// process.on('message', (datosUtils) => {
-//     process.send(generadorNumRandoms(datosUtils))
-// })
 
-process.send({ 'message': objetoUtils });
 
-process.exit();
+
+
+
+
+// const generadorNumRandoms = (cantidadNumPedidos) => {
+//     let cantidad = Number(cantidadNumPedidos);
+
+//     let numeros = [];
+
+//     for (let i = 0; i < cantidad; i++) {
+//         let random = Math.floor((Math.random() * 1000) + 1);
+//         numeros.push(random);
+//     }
+
+//     let repetidos = {};
+
+//     numeros.forEach((numero) => {
+//         repetidos[numero] = (repetidos[numero] || 0) + 1;
+//     });
+//     return repetidos;
+// }
+// process.on('message', (cantidadNumPedidos) => {
+
+//     console.log(`cantidad: ${cantidadNumPedidos}`);
+//     const generar = generadorNumRandoms(cantidadNumPedidos);
+
+//     process.send({ res: generar });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
