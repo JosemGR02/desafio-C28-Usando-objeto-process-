@@ -9,12 +9,23 @@ const obtenerDaoSeleccionados = () => {
     case "mongo": {
       servicioMongoDB.init();
       return {
-        DaoUsuario: new UsuariosMongoBD(),
+        DaoUsuario: new UsuariosMongoBD()
       };
     }
     case "filesystem": {
       return {
-        DaoUsuario: new UsuariosFileSystem(),
+        DaoUsuario: new UsuariosFileSystem()
+      };
+    }
+    case "memory": {
+      return {
+        DaoUsuario: new UsuariosMemoria(),
+      };
+    }
+    case "firebase": {
+      conectar()
+      return {
+        DaoUsuario: new UsuariosFirebase(),
       };
     }
   }
